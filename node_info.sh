@@ -42,7 +42,7 @@ main() {
 
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
-		local t_lb="Последний блок:         ${C_LGn}%s${RES}\n"
+		local t_lb="Текущий блок:         ${C_LGn}%s${RES}\n"
 		
 		local t_ni="\nID ноды:                ${C_LGn}%s${RES}"
 		local t_rc="Реферальный код:        ${C_LGn}%s${RES}"
