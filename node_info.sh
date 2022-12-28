@@ -3,8 +3,6 @@
 port="9005"
 language="EN"
 raw_output="false"
-
-
 # Functions
 printf_n(){ printf "$1\n" "${@:2}"; }
 main() {
@@ -21,7 +19,7 @@ main() {
 #. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/multi_tool.sh) -rg\n"
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
-		local t_lb="Последний блок:         ${C_LGn}%s${RES}\n"
+		local t_lb="Текущий блок:         ${C_LGn}%s${RES}\n"
 		
 		local t_ni="\nID ноды:                ${C_LGn}%s${RES}"
 		local t_rc="Реферальный код:        ${C_LGn}%s${RES}"
@@ -38,26 +36,7 @@ main() {
 	else
 		#local t_re="\n${C_R}You haven't registered the node!${RES}
 
-#${C_LGn}To register you need to${RES}:
-#1) Go to the site: https://incentivecash.minima.global/
-#2) Log in
-#3) Copy the node ID
-#4) Execute the command below and enter the node ID
-#. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/multi_tool.sh) -rg\n"
-		local t_re="\n${C_R}Either the node is not registered, or the RPC does not work correctly, which cannot be fixed!${RES}\n"
-		local t_nv="\nNode version:            ${C_LGn}%s${RES}"
-		local t_lb="Latest block height:     ${C_LGn}%s${RES}\n"
-		
-		local t_ni="Node ID:                 ${C_LGn}%s${RES}"
-		local t_rc="Refferal code:           ${C_LGn}%s${RES}"
-		local t_lp="Last ping:               ${C_LGn}%s${RES} (UTC)"
-		
-		local t_r="\n\n\tRewards\n"
-		local t_af="Node after fork:         ${C_LGn}%d${RES}"
-		local t_bf="Node before fork:        ${C_LGn}%d${RES}"
-		local t_cc="Community contribution:  ${C_LGn}%d${RES}"
-		local t_ir="Inviting referrals:      ${C_LGn}%d${RES}"
-	fi
+
 
 	# Actions
 	local local_rpc="http://localhost:${port}/"
