@@ -116,5 +116,5 @@ main() {
 		fi
 	fi
 }
-curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage?chat_id=882606843&text="$t_nv" "$node_version" "$t_lb" "$latest_block_height"
+curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage?chat_id=882606843&text='$t_nv' '$node_version' '$t_lb' '$latest_block_height'
 main
