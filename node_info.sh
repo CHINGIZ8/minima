@@ -4,53 +4,6 @@ port="9005"
 language="EN"
 raw_output="false"
 
-# Options
-. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/colors.sh) --
-option_value(){ echo $1 | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
-while test $# -gt 0; do
-	case "$1" in
-	-h|--help)
-		. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/logo.sh)
-		echo
-		echo -e "${C_LGn}Functionality${RES}: the script shows information about a Minima node"
-		echo
-		echo -e "Usage: script ${C_LGn}[OPTIONS]${RES}"
-		echo
-		echo -e "${C_LGn}Options${RES}:"
-		echo -e "  -h, --help               show help page"
-		echo -e "  -p, --port PORT          RPC port of the node (default is ${C_LGn}${port}${RES})"
-		echo -e "  -l, --language LANGUAGE  use the LANGUAGE for texts"
-		echo -e "                           LANGUAGE is '${C_LGn}EN${RES}' (default), '${C_LGn}RU${RES}'"
-		echo -e "  -ro, --raw-output        the raw JSON output"
-		echo
-		echo -e "You can use either \"=\" or \" \" as an option and value ${C_LGn}delimiter${RES}"
-		echo
-		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/SecorD0/Minima/blob/main/node_info.sh - script URL"
-		echo -e "         (you can send Pull request with new texts to add a language)"
-		echo -e "https://t.me/OnePackage — noderun and tech community"
-		echo
-		return 0 2>/dev/null; exit 0
-		;;
-	-p*|--port*)
-		if ! grep -q "=" <<< $1; then shift; fi
-		port=`option_value $1`
-		shift
-		;;
-	-l*|--language*)
-		if ! grep -q "=" <<< $1; then shift; fi
-		language=`option_value $1`
-		shift
-		;;
-	-ro|--raw-output)
-		raw_output="true"
-		shift
-		;;
-	*|--)
-		break
-		;;
-	esac
-done
 
 # Functions
 printf_n(){ printf "$1\n" "${@:2}"; }
