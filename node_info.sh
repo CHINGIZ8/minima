@@ -10,13 +10,6 @@ main() {
 	# Texts
 	if [ "$language" = "RU" ]; then
 		#local t_re="\n${C_R}Вы не зарегистрировали ноду!${RES}
-
-#${C_LGn}Для регистрации необходимо${RES}:
-#1) Перейти на сайт: https://incentivecash.minima.global/
-#2) Авторизоваться
-#3) Скопировать ID ноды
-#4) Выполнить команду ниже и вставить ID ноды
-#. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/multi_tool.sh) -rg\n"
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
 		local t_lb="Текущий блок:         ${C_LGn}%s${RES}\n"
@@ -35,8 +28,6 @@ main() {
 	#elif [ "$language" = ".." ]; then
 	else
 		#local t_re="\n${C_R}You haven't registered the node!${RES}
-
-
 
 	# Actions
 	local local_rpc="http://localhost:${port}/"
