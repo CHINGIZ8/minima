@@ -26,7 +26,7 @@ while test $# -gt 0; do
 		echo -e "You can use either \"=\" or \" \" as an option and value ${C_LGn}delimiter${RES}"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/SecorD0/Minima/blob/main/node_info.sh - script URL"
+		echo -e "https://raw.githubusercontent.com/CHINGIZ8/minima/main/node_info.sh - script URL"
 		echo -e "         (you can send Pull request with new texts to add a language)"
 		echo -e "https://t.me/OnePackage — noderun and tech community"
 		echo
