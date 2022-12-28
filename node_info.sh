@@ -116,7 +116,7 @@ main() {
 			curl --request POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage \
 --data-raw '{
   "chat_id": "882606843",
-  "text": "$t_nv $node_version $t_lb $latest_block_height"
+  "text": "привет"
 }'
 		fi
 	fi
