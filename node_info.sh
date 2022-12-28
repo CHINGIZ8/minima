@@ -62,50 +62,50 @@ main() {
 	local node_version=`jq -r ".response.version" <<< "$status"`
 	local latest_block_height=`jq -r ".response.chain.block" <<< "$status"`
 	
-	local node_id=`jq -r ".response.uid" <<< "$incentivecash"`
-	if [ -n "$node_id" ]; then
-		local node_id_hidden=`printf "$node_id" | sed 's%.*-.*-.*- *%...-%'`
-		local referral_code=`jq -r ".response.details.inviteCode" <<< "$incentivecash"`
-		local last_ping=`jq -r ".response.details.lastPing" <<< "$incentivecash"`
-		local last_ping_unix=`date --date "$last_ping" +"%s"`
-		local last_ping_human=`date --date "$last_ping" +"%d.%m.%y %H:%M" -u`
-		
-		local after_fork=`jq -r ".response.details.rewards.dailyRewards" <<< "$incentivecash"`
-		local before_fork=`jq -r ".response.details.rewards.previousRewards" <<< "$incentivecash"`
-		local community_contribution=`jq -r ".response.details.rewards.communityRewards" <<< "$incentivecash"`
-		local inviting_referrals=`jq -r ".response.details.rewards.inviterRewards" <<< "$incentivecash"`
-	fi
+#	local node_id=`jq -r ".response.uid" <<< "$incentivecash"`
+#	if [ -n "$node_id" ]; then
+#		local node_id_hidden=`printf "$node_id" | sed 's%.*-.*-.*- *%...-%'`
+#		local referral_code=`jq -r ".response.details.inviteCode" <<< "$incentivecash"`
+#		local last_ping=`jq -r ".response.details.lastPing" <<< "$incentivecash"`
+#		local last_ping_unix=`date --date "$last_ping" +"%s"`
+#		local last_ping_human=`date --date "$last_ping" +"%d.%m.%y %H:%M" -u`
+#		
+#		local after_fork=`jq -r ".response.details.rewards.dailyRewards" <<< "$incentivecash"`
+#		local before_fork=`jq -r ".response.details.rewards.previousRewards" <<< "$incentivecash"`
+#		local community_contribution=`jq -r ".response.details.rewards.communityRewards" <<< "$incentivecash"`
+#		local inviting_referrals=`jq -r ".response.details.rewards.inviterRewards" <<< "$incentivecash"`
+#	fi
 	
 	# Output
 	if [ "$raw_output" = "true" ]; then
-		printf_n '{"node_version": "%s", "latest_block_height": %d, "node_id": "%s", "referral_code": "%s", "last_ping": %d, "rewards": {"after_fork": %d, "before_fork": %d, "community_contribution": %d, "inviting_referrals": %d}}' \
+		printf_n '{"node_version": "%s", "latest_block_height": %d: { }}' \
 "$node_version" \
 "$latest_block_height" \
-"$node_id" \
-"$referral_code" \
-"$last_ping_unix" \
-"$after_fork" \
-"$before_fork" \
-"$community_contribution" \
-"$inviting_referrals" 2>/dev/null
+# "$node_id" \
+# "$referral_code" \
+# "$last_ping_unix" \
+# "$after_fork" \
+# "$before_fork" \
+# "$community_contribution" \
+# "$inviting_referrals" 2>/dev/null
 	else
 		printf_n "$t_nv" "$node_version"
 		printf_n "$t_lb" "$latest_block_height"
 		
 		if [ ! -n "$node_id" ]; then
 			printf_n "$t_re"
-		else
-			printf_n "$t_ni" "$node_id_hidden"
-			printf_n "$t_rc" "$referral_code"
-			printf_n "$t_lp" "$last_ping_human"
-			
-			printf_n "$t_r"
-			printf_n "$t_af" "$after_fork"
-			printf_n "$t_bf" "$before_fork"
-			printf_n "$t_cc" "$community_contribution"
-			printf_n "$t_ir" "$inviting_referrals"
-			printf_n
-		fi
+#		else
+#			printf_n "$t_ni" "$node_id_hidden"
+#			printf_n "$t_rc" "$referral_code"
+#			printf_n "$t_lp" "$last_ping_human"
+#			
+#			printf_n "$t_r"
+#			printf_n "$t_af" "$after_fork"
+#			printf_n "$t_bf" "$before_fork"
+#			printf_n "$t_cc" "$community_contribution"
+#			printf_n "$t_ir" "$inviting_referrals"
+#			printf_n
+#		fi
 	fi
 }
 
