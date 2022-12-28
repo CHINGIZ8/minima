@@ -57,19 +57,6 @@ main() {
 
 	else
 
-		local t_re="\n${C_R}Either the node is not registered, or the RPC does not work correctly, which cannot be fixed!${RES}\n"
-		local t_nv="\nNode version:            ${C_LGn}%s${RES}"
-		local t_lb="Latest block height:     ${C_LGn}%s${RES}\n"
-		
-		local t_ni="Node ID:                 ${C_LGn}%s${RES}"
-		local t_rc="Refferal code:           ${C_LGn}%s${RES}"
-		local t_lp="Last ping:               ${C_LGn}%s${RES} (UTC)"
-		
-		local t_r="\n\n\tRewards\n"
-		local t_af="Node after fork:         ${C_LGn}%d${RES}"
-		local t_bf="Node before fork:        ${C_LGn}%d${RES}"
-		local t_cc="Community contribution:  ${C_LGn}%d${RES}"
-		local t_ir="Inviting referrals:      ${C_LGn}%d${RES}"
 	fi
 
 	# Actions
