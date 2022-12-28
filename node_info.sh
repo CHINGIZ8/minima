@@ -157,7 +157,7 @@ main() {
 			printf_n "$t_cc" "$community_contribution"
 			printf_n "$t_ir" "$inviting_referrals"
 			printf_n
-      curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text=printf_n "$t_nv" "$node_version"
+      curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="node_version": "%s", "latest_block_height": %d,
 		fi
 	fi
 }
