@@ -82,8 +82,8 @@ main() {
 		
 	# Send Pull request with new texts to add a language - https://github.com/CHINGIZ8/minima/main/node_info.sh
 	#elif [ "$language" = ".." ]; then
-	curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="Версия ноды: $node_version 
-Текущий блок: $latest_block_height" 
+	curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="Версия ноды: t_nv 
+Текущий блок: t_lb" 
 	else
 		#local t_re="\n${C_R}You haven't registered the node!${RES}
 
