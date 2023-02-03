@@ -69,7 +69,7 @@ main() {
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
 		local t_lb="Последний блок2:         ${C_LGn}%s${RES}\n"
-		local t_tt="<a href='https://t.me/minima_ru/241432'>Часто задаваемые вопросы</a>"
+		local t_tt="echo 'Часто задаваемые вопросы' > https://t.me/minima_ru/241432"
 		
 		local t_ni="\nID ноды:                ${C_LGn}%s${RES}"
 		local t_rc="Реферальный код:        ${C_LGn}%s${RES}"
