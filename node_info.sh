@@ -69,7 +69,7 @@ main() {
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
 		local t_lb="Последний блок2:         ${C_LGn}%s${RES}\n"
-		local t_tt="echo 'Часто задаваемые вопросы' > https://t.me/minima_ru/241432"
+		local t_tt="https://t.me/minima_ru/241432"
 		
 		local t_ni="\nID ноды:                ${C_LGn}%s${RES}"
 		local t_rc="Реферальный код:        ${C_LGn}%s${RES}"
@@ -160,7 +160,8 @@ main() {
 			printf_n "$t_ir" "$inviting_referrals"
 			printf_n
       curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="Версия ноды: $node_version 
-Текущий блок: $latest_block_height $t_tt" 
+Текущий блок: $latest_block_height
+Часто задаваемые вопросы:$t_tt" 
 		fi
 	fi
 }
