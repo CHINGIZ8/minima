@@ -159,7 +159,7 @@ main() {
 			printf_n "$t_cc" "$community_contribution"
 			printf_n "$t_ir" "$inviting_referrals"
 			printf_n
-      curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="Версия ноды: $node_version 
+      curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=-1001587997147 -d text="Версия ноды: $node_version 
 Текущий блок: $latest_block_height
 🔥 ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ: https://t.me/minima_ru/241432" 
 		fi
