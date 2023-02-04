@@ -161,7 +161,7 @@ main() {
 			printf_n
       curl -s -X POST https://api.telegram.org/bot5857388219:AAHaBuwULLmZrlUU71ubNF4S_jGbHut5OnE/sendMessage -d chat_id=882606843 -d text="Версия ноды: $node_version 
 Текущий блок: $latest_block_height
-🔥 Часто задаваемые вопросы:(https://t.me/minima_ru/241432) $t_tt" 
+🔥 Часто задаваемые вопросы (https://t.me/minima_ru/241432)" 
 		fi
 	fi
 }
