@@ -163,7 +163,7 @@ main() {
 Текущий блок: $latest_block_height
 Команды:
 /br - backup restore
-/seed - Получить сид фразу 
+/seed - Как получить сид фразу 
 /links - Ссылки
 /faq - ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" 
 		fi
