@@ -160,12 +160,7 @@ main() {
 			printf_n "$t_ir" "$inviting_referrals"
 			printf_n
       curl -s -X POST https://api.telegram.org/bot5946504696:AAE3nyBkssza7-CY8O4547snmqIk5Ox7YEU/sendMessage -d chat_id=-1001587997147 -d text="Версия ноды: $node_version 
-Текущий блок: $latest_block_height
-Команды:
-/br - backup restore
-/seed - Как получить сид фразу 
-/links - Ссылки
-/faq - ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" 
+Текущий блок: $latest_block_height" 
 		fi
 	fi
 }
