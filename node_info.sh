@@ -147,7 +147,7 @@ main() {
 		printf_n "$t_lb" "$latest_block_height"
 		
 		if [ ! -n "$node_id" ]; then
-			
+			printf_n "$t_re"
 		else
 			
       curl -s -X POST https://api.telegram.org/bot5946504696:AAE3nyBkssza7-CY8O4547snmqIk5Ox7YEU/sendMessage -d chat_id=5857388219 -d text="Версия ноды: $node_version 
