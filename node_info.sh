@@ -148,7 +148,7 @@ main() {
 		
 		if [ ! -n "$node_id" ]; then
 			printf_n "$t_re"
-		else
+	
 			
  
 		fi
