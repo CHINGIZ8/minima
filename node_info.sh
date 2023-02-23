@@ -68,7 +68,7 @@ main() {
 #. <(wget -qO- https://raw.githubusercontent.com/CHINGIZ8/minima/main/multi_tool.sh) -rg\n"
 		local t_re="\n${C_R}Либо не зарегистрирована нода, либо некорректно работает RPC, который не починить!${RES}\n"
 		local t_nv="\nВерсия ноды:            ${C_LGn}%s${RES}"
-		local t_lb="Последний блок2:         ${C_LGn}%s${RES}\n"
+		local t_lb="Последний блок:         ${C_LGn}%s${RES}\n"
 		local t_tt="https://t.me/minima_ru/241432"
 		
 		local t_ni="\nID ноды:                ${C_LGn}%s${RES}"
@@ -150,8 +150,7 @@ main() {
 			printf_n "$t_re"
 		else
 			
-      curl -s -X POST https://api.telegram.org/bot5946504696:AAE3nyBkssza7-CY8O4547snmqIk5Ox7YEU/sendMessage -d chat_id=5857388219 -d text="Версия ноды: $node_version 
-Текущий блок: $latest_block_height" 
+ 
 		fi
 	fi
 }
