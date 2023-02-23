@@ -147,18 +147,9 @@ main() {
 		printf_n "$t_lb" "$latest_block_height"
 		
 		if [ ! -n "$node_id" ]; then
-			printf_n "$t_re"
-		else
-			printf_n "$t_ni" "$node_id_hidden"
-			printf_n "$t_rc" "$referral_code"
-			printf_n "$t_lp" "$last_ping_human"
 			
-			printf_n "$t_r"
-			printf_n "$t_af" "$after_fork"
-			printf_n "$t_bf" "$before_fork"
-			printf_n "$t_cc" "$community_contribution"
-			printf_n "$t_ir" "$inviting_referrals"
-			printf_n
+		else
+			
       curl -s -X POST https://api.telegram.org/bot5946504696:AAE3nyBkssza7-CY8O4547snmqIk5Ox7YEU/sendMessage -d chat_id=5857388219 -d text="Версия ноды: $node_version 
 Текущий блок: $latest_block_height" 
 		fi
